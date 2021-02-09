@@ -1,0 +1,7 @@
+*.pyc
+*.txt
+PKG-INFO
+*.pt
+*.sh
+*.params
+*.npy

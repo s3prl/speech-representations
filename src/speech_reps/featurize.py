@@ -13,7 +13,6 @@ import soundfile as sf
 from .models.decoar import DeCoAR
 from .models.wav2vec import Wav2Vec
 from .models.wav2vec2 import Wav2Vec2
-from .models.decoar2 import DeCoAR2
 from .models.bertphone import BertPhone
 
 class Featurizer:
@@ -113,7 +112,7 @@ class DeCoARFeaturizer(Featurizer):
         super().__init__() 
 
         if params_file is None:
-            params_file = Path('artifacts/decoar-encoder-29b8e2ac.params ')
+            params_file = Path('artifacts/decoar-encoder-29b8e2ac.params')
         # Load the model
         self._model = DeCoAR(40, 1024, num_hidden=1024, num_layers=4, dropout=0)
         self._ctx = mx.gpu(gpu) if gpu is not None else mx.cpu()

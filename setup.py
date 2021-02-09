@@ -16,7 +16,7 @@ setup(
 
     install_requires=[
         'numpy',
-        'gluonnlp~=0.9.1',
+        'gluonnlp==0.8.3',
         'soundfile',
         'kaldi_io'
     ],
